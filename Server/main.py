@@ -21,10 +21,18 @@ app = FastAPI(
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+origins = [
+    "http://localhost:3000",  # React default port
+    "http://127.0.0.1:3000",
+    "http://59.97.138.60:3000",
+    "https://noise-classification-jvmg.vercel.app/",
+    "http://localhost:5173"
+]
+
 # --- 2. CORS Middleware ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
