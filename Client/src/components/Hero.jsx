@@ -12,7 +12,7 @@ export default function Hero({fileInputRef,handleButtonClick,handleFileChange,fi
       <section className="flex flex-col md:flex-row items-center justify-evenly p-10 bg-blue-50">
         <div className="max-w-xxl">
           <h1 className="text-4xl font-bold text-blue-700">
-            Classify Environmental Noise in Real Time
+            Classify Environmental Noise
           </h1>
           <p className="mt-4 text-gray-600">
             Upload a sample to identify noise types like
