@@ -15,8 +15,8 @@ export default function Hero({fileInputRef,handleButtonClick,handleFileChange,fi
             Classify Environmental Noise in Real Time
           </h1>
           <p className="mt-4 text-gray-600">
-            Upload a sample or use your microphone to identify noise types like
-            traffic, construction, nature sounds, and more.
+            Upload a sample to identify noise types like
+            Airconditionar, Jackhammer, Dog Bark, and more.
           </p>
           <div className="mt-6 space-x-4">
             <button
