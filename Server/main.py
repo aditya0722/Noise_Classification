@@ -401,7 +401,11 @@ async def predict_noise_type(audio_file: UploadFile = File(...)):
         memory_manager.aggressive_cleanup()
         logging.error(f"Prediction error: {e}")
         raise HTTPException(status_code=500, detail="Internal server error")
-
+    
+# --- FastAPI Root Endpoint ---
+@app.get("/")
+def read_root():
+    return {"message": "Hello from FastAPI on GCP!"}
 # --- Health Check ---
 @app.get("/health")
 async def health_check():
