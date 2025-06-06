@@ -33,7 +33,7 @@ function App() {
       
       try {
         // --- IMPORTANT CHANGE 2: Match backend's endpoint '/upload-audio' ---
-        const response = await fetch("https://noise-classification.onrender.com/upload-audio", {
+        const response = await fetch("https://8000-cs-a315db39-7433-4f72-a3a8-30d2de187983.cs-asia-east1-cats.cloudshell.dev/upload-audio", {
           method: "POST",
           // No 'Content-Type' header needed for FormData; browser sets it automatically
           body: formData,
