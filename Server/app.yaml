@@ -2,6 +2,7 @@ runtime: python39
 
 
 # FastAPI with uvicorn entrypoint
-entrypoint: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+entrypoint: gunicorn -w 2 -k uvicorn.workers.UvicornWorker main:app --timeout 60
 
 instance_class: F1
