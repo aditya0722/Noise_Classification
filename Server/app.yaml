@@ -1,8 +1,9 @@
 runtime: python39
 
+# Increase the instance_class to provide more memory and CPU
+# F4 is a good starting point for ML applications on App Engine Standard.
+# F2 might work but could still be tight. B1/B2 are also options for larger models.
+instance_class: F4
 
-# FastAPI with uvicorn entrypoint
-
-entrypoint: gunicorn -w 2 -k uvicorn.workers.UvicornWorker main:app --timeout 60
-
-instance_class: F1
+# Increase the timeout for model loading, just in case (though resource increase is key)
+entrypoint: gunicorn -w 2 -k uvicorn.workers.UvicornWorker main:app --timeout 180 # Increased to 3 minutes
